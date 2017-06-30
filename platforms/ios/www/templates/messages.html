@@ -1,0 +1,16 @@
+<ion-view title="Messages">
+    <ion-content overflow-scroll="true" padding="false" class="has-header">
+        <ion-list>
+            <ion-item class="no-animate item-avatar item-icon-right" ng-repeat="message in messages" type="item-text-wrap" ui-sref="tabsController.fullMessage({ messageId: message.id })">
+              <img ng-src="{{ message.photo }}">
+              <h2>{{ message.sender_name }}</h2>
+              <p>{{ message.message }}</p>
+              <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+
+            <div class="no-cards" ng-if="messages.length == 0">
+              No messages yet.
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

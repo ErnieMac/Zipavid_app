@@ -1,0 +1,32 @@
+<ion-view>
+    <ion-nav-title>{{ sender_name }}</ion-nav-title>
+    <ion-nav-buttons side="right"><!--onclick='document.getElementById("fileup").click();'-->
+      <a class="button button-light button-outline" ng-click="record()" style="color: white; border-color: white;">Send Video</a>
+    </ion-nav-buttons>
+    <ion-content overflow-scroll="true" padding="true" class="has-header" delegate-handle="userMessageScroll">
+
+      <div class="messageBlock" ng-repeat="message in messages">
+          <img ng-src="{{ message.photo }}" class="avatar left">
+          <div class="bubble left {{ message.color }}">
+            {{ message.message }}
+            <video ng-if="message.video" ng-src="{{ message.video | trustUrl }}" controls="true" style="width: 100%"></video>
+            <div style="font-size: 8pt;">{{ message.date | date : 'short' }}</div>
+          </div>
+          <div style="clear: both !important;"></div>
+      </div>
+
+    </ion-content>
+
+    <input type="file" id="fileup" style="display:none;">
+
+    <form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+      <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+        <label class="item-input-wrapper">
+          <input ng-model="input.message" ng-focus="scrollDown()" style="resize: none; height: 25px; line-height: 25px; width: 100%; background: transparent; overflow: hidden; border: none;" value="" placeholder="Send {{ sender_name }} a message..." required minlength="1" maxlength="250">
+        </label>
+       <div class="footer-btn-wrap">
+      <button class="button button-icon icon ion-android-send footer-btn" type="submit" ng-disabled="!input.message || input.message === ''"></button>
+      </div>
+    </ion-footer-bar>
+   </form>
+</ion-view>

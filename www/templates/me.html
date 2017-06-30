@@ -1,0 +1,14 @@
+<ion-view title="Dashboard">
+  <ion-content overflow-scroll="true" class="has-header">
+    <div class="row profile-bg">
+      <div class="col center">
+        <div style="text-align:center;">
+            <img ng-src="{{ photo }}" style="border-radius:100%;" width="40%" height="auto">
+        </div>
+        <h4 class="center">{{ fullName }}</h4>
+          <small><i class="icon ion-ios-location"></i> {{ location }}</small>
+          <a ui-sref="tabsController.editProfile" id="myProfile-btn" class="button button-balanced button-small button-block button-clear">EDIT PROFILE</a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

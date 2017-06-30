@@ -1,0 +1,31 @@
+<ion-view title="Signup">
+    <ion-content overflow-scroll="true" padding="false" scroll="false" class="has-header">
+      <div class="col center item-logo"><img src="img/logo-green.svg" alt="logo"/></div>
+        <form class="list" ng-submit="signup.submit()">
+            <ion-list>
+              <label class="item item-input item-stacked-label">
+                  <span class="input-label">First Name</span>
+                  <input type="text" placeholder="John" ng-model="signup.firstName">
+              </label>
+
+              <label class="item item-input item-stacked-label">
+                  <span class="input-label">Last Name</span>
+                  <input type="text" placeholder="Doe" ng-model="signup.lastName">
+              </label>
+
+              <label class="item item-input item-stacked-label" name="email">
+                  <span class="input-label">Email</span>
+                  <input type="email" placeholder="john@email.com" ng-model="signup.email">
+              </label>
+
+              <label class="item item-input item-stacked-label">
+                  <span class="input-label">Password</span>
+                  <input type="password" placeholder="Your Password" ng-model="signup.password">
+              </label>
+            </ion-list>
+            <div class="padding">
+              <button type="submit" id="signup-btn" style="border-radius:0px;" class="button button-balanced button-block">SIGN UP</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

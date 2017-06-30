@@ -1,0 +1,14 @@
+<ion-view title="Record Video">
+    <ion-content overflow-scroll="true" padding="true" scroll="false" class="has-header">
+        <center id="novideo">No video has been uploaded yet.</center>
+        <div style="position:relative;overflow:hidden;padding-bottom:56.25%;height:0;" id="videowrapper">
+            <video id="video" style="position:absolute;top:0;left:0;width:100%;height:100%;" controls="true"></video>
+        </div>
+        <div class="spacer" style="width: 283px; height: 18px;"></div>
+        <a ui-sref="tabsController.jobs" id="video-button19" style="border-radius:0px;" class="button button-dark button-small button-block button-clear skip">SKIP   <icon class="ion-ios-arrow-right"></icon></a>
+        
+        <button id="video-button29" onclick='document.getElementById("fileup").click();' style="border-radius:50px;" class="button button-balanced  button-block button-outline">UPLOAD FROM GALLERY</button>
+
+        <input type="file" id="fileup" style="display:none;">
+    </ion-content>
+</ion-view>

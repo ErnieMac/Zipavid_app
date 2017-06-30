@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "199268270628",
+    "firebase_url": "https://zipavid-142616.firebaseio.com",
+    "project_id": "zipavid-142616",
+    "storage_bucket": "zipavid-142616.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199268270628:android:acc1eb2cd0c034d7",
+        "android_client_info": {
+          "package_name": "com.zipavid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199268270628-d6breljstso8avbl6c8a5jsd3vq5ktj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7JzWvIl9YxS0At6e67lpudpOzIeDJkl8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

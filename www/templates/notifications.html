@@ -1,0 +1,18 @@
+<ion-view title="Job Applications">
+    <ion-content class="has-header">
+      <ion-refresher
+        pulling-text="Pull to refresh..."
+        on-refresh="doRefresh()">
+      </ion-refresher>
+      <div class="item" ng-repeat="job in jobs">
+        <p class="jobtitle">{{ job.title }}</p>
+        <p class="salary">{{ job.company }}</p>
+        <p class="location" style="color: #27ae60" ng-if="job.status == 2"><i class="ion-checkmark"></i> Invited for interview</p>
+        <p class="location" style="color: #2980b9" ng-if="job.status == 0"><i class="ion-clock"></i> In progress... </p>
+        <p class="location" style="color: #c0392b" ng-if="job.status == 1"><i class="ion-close"></i> Not accepted</p>
+      </div>
+      <div class="no-cards" ng-if="jobs.length == 0">
+        You haven't applied for any job yet.
+      </div>
+    </ion-content>
+</ion-view>

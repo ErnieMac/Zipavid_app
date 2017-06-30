@@ -1,0 +1,105 @@
+<ion-view title="Edit Profile">
+    <ion-content overflow-scroll="true" padding="true" scroll="true" class="has-header">
+        <div style="text-align:center;">
+            <img ng-src="{{ edit.photo }}" style="border-radius:30px;" width="50%" height="auto">
+        </div>
+        <div class="button-bar">
+            <button id="editProfile-button13" ng-click="edit.capture(1)" style="border-radius:0px;margin-right: 2px" class="button button-balanced button-small button-block button-outline">CAPTURE</button>
+            <button id="editProfile-button18" ng-click="edit.capture(0)" style="border-radius:0px;margin-left: 2px;" class="button button-balanced button-small button-block button-outline">GALLERY</button>
+        </div>
+        <form class="list" ng-submit="edit.updateData()">
+            <ion-list>
+                <ion-item class="item-divider">User Details</ion-item>
+                <label class="item item-input">
+                    <span class="input-label">First Name</span>
+                    <input type="text" ng-model="edit.firstName">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" ng-model="edit.lastName">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="email" ng-model="edit.email">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Your Address</span>
+                    <input type="text" placeholder="12 Mill Road" ng-model="edit.address">
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Post Code</span>
+                    <input type="text" placeholder="RM2 1PX" ng-model="edit.post_code">
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Location</span>
+                    <input type="text" placeholder="London, UK" ng-model="edit.location">
+                </label>
+
+                <label class="item item-input item-stacked-label" name="text">
+                    <span class="input-label">Date of Birth</span>
+                    <input type="date" placeholder="21/06/1990" ng-model="edit.birth_date">
+                </label>
+
+                <ion-item class="item item-divider">
+                  Education Level
+                </ion-item>
+                  <ion-radio ng-model="edit.education_lvl" value="1">High School Degree</ion-radio>
+                  <ion-radio ng-model="edit.education_lvl" value="2">College Degree</ion-radio>
+                  <ion-radio ng-model="edit.education_lvl" value="3">University Degree </ion-radio>
+            </ion-list>
+            <button id="editProfile-button8" style="border-radius:0px;" class="button button-calm button-small button-block">UPDATE</button>
+        </form>
+        <form class="list" ng-submit="edit.updateDetails()">
+            <ion-list>
+              <label class="item item-input item-stacked-label" name="linkedinurl">
+                <span class="input-label">Your LinkedIn profile URL</span>
+                <textarea placeholder="eg. https://www.linkedin.com/in/john-doe-123456789/" ng-model="edit.linkedinurl"></textarea>
+              </label>
+
+              <label class="item item-input item-stacked-label" name="education">
+                <span class="input-label">Your Education</span>
+                <textarea placeholder="eg. Univeristy of Greenwich" ng-model="edit.education"></textarea>
+              </label>
+
+              <label class="item item-input item-stacked-label" name="skills">
+                <span class="input-label">Your Skills</span>
+                <textarea placeholder="eg. Custemer Service, Good Communication Skills" ng-model="edit.skills"></textarea>
+              </label>
+
+              <label class="item item-input item-stacked-label" name="experience">
+                <span class="input-label">Your Work Experience</span>
+                <textarea placeholder="Retail, Marketing, IT Suppport" ng-model="edit.experience"></textarea>
+              </label>
+
+              <label class="item item-input item-stacked-label" name="language">
+                <span class="input-label">Languages You Speak</span>
+                <textarea placeholder="eg. English, French" ng-model="edit.language"></textarea>
+              </label>
+            </ion-list>
+            <button id="editProfile-button8" style="border-radius:0px;" class="button button-calm button-small button-block">UPDATE</button>
+
+            <ion-list>
+              <ion-item class="item-divider">User Details</ion-item>
+              <ion-item><p style="text-align:center">No CV uploaded yet</p></ion-item>
+            </ion-list>
+            <button type="button" id="editProfile-button8" onclick='document.getElementById("fileup3").click();' style="border-radius:0px;" class="button button-calm button-small button-block">UPLOAD CV</button>
+        </form>
+        <input type="file" id="fileup3" style="display:none;">
+        <form class="list" ng-submit="edit.changePassword()">
+            <ion-list>
+                <ion-item class="item-divider">Change Password</ion-item>
+                <label class="item item-input">
+                    <span class="input-label">Old Password</span>
+                    <input type="password" ng-model="edit.oldPassword">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">New Password</span>
+                    <input type="password" ng-model="edit.newPassword">
+                </label>
+            </ion-list>
+            <button type="submit" style="border-radius: 0px;" class="button button-calm button-small button-block">CHANGE PASSWORD</button>
+        </form>
+    </ion-content>
+</ion-view>

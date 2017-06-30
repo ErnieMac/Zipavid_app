@@ -1,0 +1,48 @@
+<ion-view title="More">
+    <ion-content overflow-scroll="true" padding="false" class="has-header">
+      <ion-list>
+        <ion-item class="item-divider">About</ion-item>
+        <!-- <ion-item ui-sref="tabsController.myProfile">My Profile</ion-item> -->
+
+        <!--<ion-toggle toggle-class="toggle-balanced" name="notify">
+          <i class="ion-ios-bell more-icon"></i> Notifications
+        </ion-toggle>
+
+        <ion-item ui-sref="tabsController.settings">
+          <i class="ion-ios-settings more-icon"></i> Settings
+        </ion-item>-->
+
+        <ion-item href="mailto:support@zipavid.com?subject=Feedback">
+          <i class="ion-ios-email more-icon"></i> Contact
+        </ion-item>
+
+        <ion-item class="item item-divider">
+          Legal
+        </ion-item>
+
+        <ion-item ui-sref="tabsController.privacy">
+          <i class="ion-ios-locked more-icon"></i> Privacy Policy
+        </ion-item>
+
+        <ion-item ui-sref="tabsController.terms">
+          <i class="ion-document-text more-icon"></i> Terms &amp; Conditions
+        </ion-item>
+
+        <ion-item class="item item-divider">
+          Miscellaneous
+        </ion-item>
+
+        <ion-item href="mailto:support@zipavid.com?subject=Bug Report">
+          <i class="ion-bug more-icon"></i> Report Bugs
+        </ion-item>
+
+        <ion-item href="#" onclick="window.open('https://zipavid.com/mobile.php', '_system', 'location=yes'); return false;">
+          <i class="ion-star more-icon"></i> Rate on App Store
+        </ion-item>
+
+        <ion-item ng-click="logout()">
+          <i class="ion-log-out more-icon"></i> Logout
+        </ion-item>
+      </ion-list>
+    </ion-content>
+</ion-view>

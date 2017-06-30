@@ -1,0 +1,36 @@
+<ion-view title="My Profile">
+    <ion-content overflow-scroll="true" class="has-header">
+      <div class="row responsive-sm profile-bg">
+        <div class="col center">
+          <div style="text-align:center;">
+              <img src="img/i8wN4mATbei14CSL6VFg_1458259350_malecostume.svg" width="40%" height="auto">
+          </div>
+          <h4 class="center">Ernie Mac</h4>
+            <small><i class="icon ion-ios-location"></i> London, UK</small>
+            <a ui-sref="tabsController.editProfile" id="myProfile-btn" class="button button-balanced button-small button-block button-clear">EDIT PROFILE</a>
+        </div>
+      </div>
+
+      <div class="row grid-wrap">
+        <div class="col 33 icon-grid clouds"><i class="icon ion-ios-email-outline"></i> <br>Messages</div>
+        <div class="col 33 icon-grid sunflower"><i class="icon ion-ios-film-outline"></i> <br>Videos</div>
+        <div class="col 33 icon-grid emerald"><i class="icon ion-ios-location"></i> <br>Interviews</div>
+      </div>
+
+      <div class="row grid-wrap">
+        <div class="col 33 icon-grid carrot"><i class="icon ion-ios-filing-outline"></i> <br>Offers</div>
+        <div class="col 33 icon-grid river"><i class="icon ion-ios-albums-outline"></i> <br>Applications</div>
+        <div class="col 33 icon-grid amethyst"><i class="icon ion-ios-search"></i> <br>Search</div>
+      </div>
+
+        <ion-list padding="true">
+            <ion-item class="item-divider">About</ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item ui-sref="tabsController.savedJobs">Saved Jobs</ion-item>
+            <ion-item ui-sref="tabsController.interviewsBooked">Interviews Booked</ion-item>
+            <ion-item ui-sref="tabsController.applicationHistory">Application History</ion-item>
+            <ion-item ui-sref="tabsController.applicationHistory">Videos Uploaded</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

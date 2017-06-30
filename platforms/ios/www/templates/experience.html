@@ -1,0 +1,51 @@
+<ion-view title="Your Experience">
+  <ion-content overflow-scroll="true" padding="false" scroll="true" class="has-header">
+    <div class="padding">
+      <a id="fb-cta" style="margin-right: 0; border-radius: 0;" ng-click="experience.linkedin()" class="button button-positive button-block">Fill in with LinkedIn</a>
+    </div>
+    <form class="list" ng-submit="experience.submit()">
+      <ion-list>
+        <label class="item item-input item-stacked-label" name="linkedinurl">
+          <span class="input-label">Your LinkedIn profile URL</span>
+          <textarea placeholder="eg. https://www.linkedin.com/in/john-doe-123456789/" ng-model="experience.linkedinurl"></textarea>
+        </label>
+
+        <label class="item item-input item-stacked-label" name="experience">
+          <span class="input-label">Add Your Work Experience</span>
+          <textarea placeholder="Retail, Marketing, IT Suppport" ng-model="experience.experience"></textarea>
+        </label>
+
+        <label class="item item-input item-stacked-label" name="education">
+          <span class="input-label">Add Your Education</span>
+          <textarea placeholder="eg. Univeristy of Greenwich" ng-model="experience.education"></textarea>
+        </label>
+
+        <label class="item item-input item-stacked-label" name="skills">
+          <span class="input-label">Add Your Skills</span>
+          <textarea placeholder="eg. Customer Service, Good Communication Skills" ng-model="experience.skills"></textarea>
+        </label>
+
+        <label class="item item-input item-stacked-label" name="language">
+          <span class="input-label">Add Languages You Speak</span>
+          <input ion-autocomplete type="text" readonly="readonly" class="ion-autocomplete" autocomplete="off"
+                       ng-model="experience.language"
+                       item-value-key="name"
+                       item-view-value-key="name"
+                       items-method="experience.getItems(query)"
+                       items-method-value-key="items"
+                       placeholder="eg. English, French"
+                       ng-model-options="{debounce:1000}" />
+        </label>
+      </ion-list>
+      <div class="spacer" style="height: 30px;"></div>
+      <input type="file" id="fileup4" style="display:none;">
+      <div class="padding">
+        <button type="button" id="editProfile-button8" onclick='document.getElementById("fileup4").click();' style="border-radius:0px;" class="button button-calm button-small button-block">UPLOAD CV</button>
+      </div>
+      <div class="spacer" style="height: 30px;"></div>
+      <div class="padding">
+        <button type="submit" id="signup-btn" style="border-radius:0px;" class="button button-balanced button-block">COMPLETE YOUR PROFILE</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

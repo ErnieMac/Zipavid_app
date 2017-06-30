@@ -1,0 +1,48 @@
+<ion-view title="Create Your Profile">
+  <ion-content padding="false" class="has-header">
+      <form class="list" ng-submit="create.submit()">
+        <ion-list>
+          <label class="item item-input item-stacked-label" ng-if="create.needsName">
+              <span class="input-label">First Name</span>
+              <input type="text" ng-model="create.first_name">
+          </label>
+
+          <label class="item item-input item-stacked-label" ng-if="create.needsName">
+              <span class="input-label">Last Name</span>
+              <input type="text" ng-model="create.last_name">
+          </label>
+
+          <label class="item item-input item-stacked-label">
+              <span class="input-label">Your Address</span>
+              <input type="text" placeholder="12 Mill Road" google-autocomplete-suggestion location="data.location" on-selection="create.onAddressSelection(location)" ng-model="data.location.formatted_address" required>
+          </label>
+
+          <label class="item item-input item-stacked-label">
+              <span class="input-label">Post Code</span>
+              <input type="text" placeholder="RM2 1PX" ng-model="create.post_code">
+          </label>
+
+          <label class="item item-input item-stacked-label">
+              <span class="input-label">Location</span>
+              <input type="text" placeholder="London, UK" ng-model="create.location">
+          </label>
+
+          <label class="item item-input item-stacked-label" name="text">
+              <span class="input-label">Date of Birth</span>
+              <input type="date" placeholder="21/06/1990" ng-model="create.birth_date">
+          </label>
+
+          <ion-item class="item item-divider">
+            Education Level
+          </ion-item>
+            <ion-radio ng-model="create.education" ng-value="'1'">High School Degree</ion-radio>
+            <ion-radio ng-model="create.education" ng-value="'2'">College Degree</ion-radio>
+            <ion-radio ng-model="create.education" ng-value="'3'">University Degree </ion-radio>
+        </ion-list>
+
+        <div class="padding">
+          <button type="submit" id="next-btn" style="border-radius:0px;" class="button button-balanced button-block">CONTINUE</button>
+        </div>
+      </form>
+  </ion-content>
+</ion-view>

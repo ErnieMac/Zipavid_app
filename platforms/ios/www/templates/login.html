@@ -1,0 +1,23 @@
+<ion-view title="Login">
+    <ion-content overflow-scroll="true" padding="false" class="has-header">
+      <div class="col item-logo"><img src="img/logo-green.svg" alt="logo"/></div>
+        <form class="list" ng-submit="login.signin()">
+            <ion-list>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Email</span>
+                    <input name="email" type="text" placeholder="john.doe@email.com" ng-model="login.email">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Password</span>
+                    <input name="password" type="password" placeholder="Your password" ng-model="login.password">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 16px;"></div>
+            <div class="padding">
+              <button type="submit" id="login-button9" style="border-radius:0;" class="button button-balanced button-block">LOGIN</button>
+              <a ui-sref="signup" id="login-button17" style="border-radius:0;" class="button button-balanced button-block button-outline">CREATE ACCOUNT</a>
+            </div>
+        </form>
+        <a ui-sref="forgotPassword" style="font-weight: 400;" class="button button-stable button-small button-block button-clear">FORGOT PASSWORD?</a>
+    </ion-content>
+</ion-view>

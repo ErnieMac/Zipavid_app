@@ -1,0 +1,29 @@
+<ion-view title="Featured Jobs">
+    <ion-content no-scroll padding="false" class="has-header">
+        <ion-refresher
+          pulling-text="Pull to refresh..."
+          on-refresh="doRefresh()">
+        </ion-refresher>
+        <td-cards>
+          <td-card ng-repeat="job in jobs" on-destroy="cardDestroyed($index)" on-partial-swipe="cardPartialSwipe(amt)" ui-sref="tabsController.jobDetails({ id: job.id })">
+            <div>
+              <!--<div class="no-text overlayBox"><div class="noBox boxed">IGNORE</div></div>
+              <div class="yes-text overlayBox"><div class="yesBox boxed">APPLY</div></div>-->
+              <div class="hero"><img ng-src="{{ job.image }}"/></div>
+              <div class="row">
+                <div class="col item-avatar"><img ng-src="{{ job.icon }}" style="position:relative;"/></div>
+                  <div class="col col-75">
+                    <p class="jobtitle">{{ job.title }}</p>
+                    <p class="salary">{{ job.salary }}</p>
+                    <p class="location">{{ job.company }}</p>
+                  </div>
+              </div>
+            </div>
+          </td-card>
+        </td-cards>
+
+        <div class="no-cards">
+          No more jobs available.
+        </div>
+    </ion-content>
+</ion-view>
